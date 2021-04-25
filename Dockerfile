@@ -2,7 +2,11 @@ FROM sulinggg/openwrt:x86_64
 
 EXPOSE 80
 
-RUN mkdir /var/lock
+RUN mkdir /var/lock && \
+    opkg update && \
+    opkg install openvpn-openssl  luci-app-openvpn
+    
+VOLUME /etc/openvpn
 
 USER root
 
