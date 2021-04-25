@@ -9,6 +9,6 @@ RUN mkdir /var/lock && \
     opkg install luci-i18n-base-zh-cn  luci-proto-ipv6 luci-app-openvpn && \
     opkg install luci-app-uhttpd luci-app-upnp luci-app-ddns
 USER root
-
+VOLUME /etc/openvpn
 # using exec format so that /sbin/init is proc 1 (see procd docs)
 CMD ["/sbin/init"]
