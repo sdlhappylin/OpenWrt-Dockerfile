@@ -1,5 +1,4 @@
-FROM scratch
-ADD https://downloads.openwrt.org/releases/19.07.7/targets/x86/64/openwrt-19.07.7-x86-64-generic-rootfs.tar.gz /
+FROM openwrtorg/rootfs
 
 EXPOSE 80
 
