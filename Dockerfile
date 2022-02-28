@@ -3,8 +3,9 @@ FROM sulinggg/openwrt:x86_64
 EXPOSE 80
 
 RUN mkdir /var/lock && \
+    mkdir /etc/openvpn && \
     opkg update && \
-    opkg install openvpn-openssl openssl-util luci-app-openvpn luci-i18n-openvpn-zh-cn
+    opkg install openvpn-openssl openssl-util luci-app-openvpn luci-i18n-openvpn-zh-cn dnsmasq-full ipset
     
 USER root
 
